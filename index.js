@@ -15,6 +15,9 @@ app.use(cors());
 
 //App içersine dahil etmek için posts url belirlenir. Artık 'localhost:5000/posts' ile çalışabiliriz.
 app.use('/posts', postRoutes);
+app.get('/', (req,res) => {
+    res.send('Hello API');
+});
 
 const PORT = process.env.PORT || 5000;
 
